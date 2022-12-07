@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: sample-service
   labels:
-	run: sample
+    run: sample
 spec:
   selector:
     run: sample
