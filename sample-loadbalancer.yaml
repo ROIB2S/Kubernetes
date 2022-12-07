@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-loadbalancer
+  labels:
+    run: sample
+spec:
+  allocateLoadBalancerNodePorts: true
+  selector:
+    app: sample
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
